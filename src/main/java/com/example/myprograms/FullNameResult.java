@@ -1,8 +1,10 @@
 package com.example.myprograms;
 
+import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+@Data
 @Document(collection = "full_name_results")
 public class FullNameResult {
     @Id
@@ -12,19 +14,4 @@ public class FullNameResult {
     private String middleName;
     private String lastName;
     private String fullName;
-
-    public String getId() { return id; }
-    public void setId(String id) { this.id = id; }
-
-    public String getFirstName() { return firstName; }
-    public void setFirstName(String firstName) { this.firstName = firstName; }
-
-    public String getMiddleName() { return middleName; }
-    public void setMiddleName(String middleName) { this.middleName = middleName; }
-
-    public String getLastName() { return lastName; }
-    public void setLastName(String lastName) { this.lastName = lastName; }
-
-    public String getFullName() { return fullName; }
-    public void setFullName(String fullName) { this.fullName = fullName; }
 }
