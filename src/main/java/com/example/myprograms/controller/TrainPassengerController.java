@@ -1,7 +1,7 @@
-package com.example.myprograms.Controller;
+package com.example.myprograms.controller;
 
-import com.example.myprograms.Model.BookResponse;
-import com.example.myprograms.Service.BooksAvailabilityService;
+import com.example.myprograms.model.TrainPassengerResponse;
+import com.example.myprograms.service.TrainPassengerService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -14,24 +14,20 @@ import java.util.List;
 
 @Slf4j
 @RestController
-public class BooksAvailabilityController {
+public class TrainPassengerController {
 
     @Autowired
-    private BooksAvailabilityService booksAvailabilityService;
+    private TrainPassengerService trainPassengerService;
 
-    @GetMapping("/books/available")
+    @GetMapping("/passenger-info")
     @ResponseBody
-    public ResponseEntity<List<?>> getBooksAvailiability(
+    public ResponseEntity<List<TrainPassengerResponse>> getPassengerInfo(
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "20") int size) {
 
-        log.info("Request received: /books/available&page={}&size={}", page, size );
-
-        List<BookResponse> response = booksAvailabilityService.getBooksAvailability(page, size);
-
-        log.info("Books retrieved successfully,total count={}", response.size());
-
+        List<TrainPassengerResponse> response = trainPassengerService.getPassengerInfo(page, size);
         return ResponseEntity.ok(response);
+
     }
 
 }

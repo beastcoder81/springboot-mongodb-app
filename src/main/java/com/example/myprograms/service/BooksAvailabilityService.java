@@ -1,7 +1,7 @@
-package com.example.myprograms.Service;
+package com.example.myprograms.service;
 
-import com.example.myprograms.Dao.BooksAvailabilityDao;
-import com.example.myprograms.Model.BookResponse;
+import com.example.myprograms.dao.BooksAvailabilityDao;
+import com.example.myprograms.model.BookResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

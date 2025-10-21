@@ -1,6 +1,6 @@
-package com.example.myprograms.Dao;
+package com.example.myprograms.dao;
 
-import com.example.myprograms.Model.TrainPassengerResponse;
+import com.example.myprograms.model.TrainPassengerResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;

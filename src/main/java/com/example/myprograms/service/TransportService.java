@@ -1,18 +1,12 @@
-package com.example.myprograms.Service;
+package com.example.myprograms.service;
 
-import com.example.myprograms.Dao.TrainPassengerDao;
-import com.example.myprograms.Dao.TransportDao;
-import com.example.myprograms.Model.TransportResponse;
+import com.example.myprograms.dao.TransportDao;
+import com.example.myprograms.model.TransportResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
-
-import static com.example.myprograms.enums.BatchStatus.COMPLETE;
 
 @Slf4j
 @Service

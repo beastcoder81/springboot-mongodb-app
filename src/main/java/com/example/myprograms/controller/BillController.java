@@ -1,7 +1,8 @@
-package com.example.myprograms.Controller;
+package com.example.myprograms.controller;
 
-import com.example.myprograms.Model.TransportResponse;
-import com.example.myprograms.Service.TransportService;
+
+import com.example.myprograms.model.BillResponse;
+import com.example.myprograms.service.BillService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -14,18 +15,18 @@ import java.util.List;
 
 @Slf4j
 @RestController
-public class TransportController {
+public class BillController {
 
     @Autowired
-    private TransportService transportService;
+    private BillService billService;
 
-    @GetMapping("/transport/status")
+    @GetMapping("/bill")
     @ResponseBody
-    public ResponseEntity<List<?>> getTransportStatus(
+    public ResponseEntity<List<?>> getBillDetails(
             @RequestParam(defaultValue = "0") int page,
-            @RequestParam(defaultValue = "20") int size) {
+            @RequestParam(required = true) int size) {
 
-        List<TransportResponse> response = transportService.getTransportStatus(page, size);
+        List<BillResponse> response = billService.getBillDetails(page, size);
 
         return ResponseEntity.ok(response);
     }

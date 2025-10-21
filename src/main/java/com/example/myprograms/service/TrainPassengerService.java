@@ -1,12 +1,11 @@
-package com.example.myprograms.Service;
+package com.example.myprograms.service;
 
-import com.example.myprograms.Dao.TrainPassengerDao;
-import com.example.myprograms.Model.TrainPassengerResponse;
+import com.example.myprograms.dao.TrainPassengerDao;
+import com.example.myprograms.model.TrainPassengerResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class TrainPassengerService {

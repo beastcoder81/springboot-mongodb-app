@@ -1,6 +1,6 @@
-package com.example.myprograms.Dao;
+package com.example.myprograms.dao;
 
-import com.example.myprograms.Model.BookResponse;
+import com.example.myprograms.model.BookResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
